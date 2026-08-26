@@ -35,13 +35,13 @@ export const business = {
 // ============================================================
 
 export const prices = [
-  { service: "Off-Hand Overlock", price: 17 },
-  { service: "Model Off-Hand", price: 22 },
-  { service: "Full-Hand Overlock", price: 20 },
-  { service: "Model Full-Hand", price: 26 },
+  { service: "Off-Hand Kaja Button", price: 17 },
+  { service: "Off-Hand Model Button", price: 22 },
+  { service: "Full Hand Kaja Button", price: 20 },
+  { service: "Full Hand Model Button", price: 26 },
+  { service: "Chudithar Overlock", price: 50 },
   { service: "Blouse Overlock", price: 20 },
-  { service: "Chudithar Overlock", price: 40 },
-  { service: "Pant Overlock", price: 40 },
+  { service: "Gents Pant Overlock", price: 40 },
 ];
 
 // ============================================================
