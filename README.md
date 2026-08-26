@@ -1,34 +1,58 @@
-# Subbiah Kaja Button & Tailoring — Website
+# 🧵 Subbiah Kaja Button & Tailoring
 
-Official website for **SUBBIAH KAJA BUTTON & TAILORING**, a local tailoring and garment-finishing business in Virugambakkam, Chennai.
+<div align="center">
 
-🌐 **Live Website:** [https://subbiah-kaja-tailoring.netlify.app](https://subbiah-kaja-tailoring.netlify.app)
+**Official website for SUBBIAH KAJA BUTTON & TAILORING**
+*Tailoring and garment finishing services in Virugambakkam, Chennai*
 
----
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-subbiah--kaja--tailoring.netlify.app-2d6a4f?style=for-the-badge)](https://subbiah-kaja-tailoring.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/subbiah-kaja-tailoring/deploy-status)](https://app.netlify.com/projects/subbiah-kaja-tailoring/overview)
+[![GitHub](https://img.shields.io/badge/GitHub-rakesh4407-181717?style=flat&logo=github)](https://github.com/rakesh4407/subbiah-kaja-tailoring)
 
-## About the Business
-
-**SUBBIAH KAJA BUTTON & TAILORING**
-📍 151, 2nd Main Rd, Sheik Abdullah Nagar, Virugambakkam, Chennai, Tamil Nadu 600092
-📞 86100 45411
-
-Services: Tailoring · Overlock · Button · Garment Finishing · Alterations
+</div>
 
 ---
 
-## Tech Stack
+## 🏪 About the Business
 
-| Tool | Version |
+| | |
 |---|---|
-| React | 19 |
-| TypeScript | 6 |
-| Vite | 8 |
-| Tailwind CSS | v4 |
-| lucide-react | latest |
+| **Business** | SUBBIAH KAJA BUTTON & TAILORING |
+| **Address** | 151, 2nd Main Rd, Sheik Abdullah Nagar, Virugambakkam, Chennai, Tamil Nadu 600092 |
+| **Phone** | 86100 45411 |
+| **WhatsApp** | +91 86100 45411 |
+| **Services** | Tailoring · Overlock · Button · Garment Finishing · Alterations |
 
 ---
 
-## Project Structure
+## ⚡ Tech Stack
+
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-38BDF8?style=flat&logo=tailwindcss&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=flat&logo=netlify&logoColor=white)
+
+---
+
+## 📄 Pages & Sections
+
+| Section | Description |
+|---|---|
+| 🏠 **Hero** | Business name, tagline, Call / WhatsApp / Directions / Prices buttons |
+| ✅ **Why Visit Us** | 5 factual trust points |
+| ✂️ **Services** | Tailoring, Overlock, Button & Finishing cards |
+| 💰 **Price List** | All 7 confirmed overlock prices in ₹ |
+| 🖼️ **Gallery** | 5 real shop photos with category filters & lightbox |
+| ℹ️ **About** | Genuine business description — no invented claims |
+| ⭐ **Reviews** | Google reviews placeholder |
+| 📍 **Location** | Google Maps embed + Get Directions |
+| 📞 **Contact** | Call Now + WhatsApp with pre-filled message |
+| 📱 **Mobile Nav** | Fixed bottom bar: Call / WhatsApp / Directions |
+
+---
+
+## 📁 Project Structure
 
 ```
 Kaja_Shop/
@@ -36,7 +60,7 @@ Kaja_Shop/
 ├── netlify.toml                # Netlify deployment config
 ├── public/
 │   ├── favicon.svg
-│   ├── _redirects              # SPA routing for Netlify
+│   ├── _redirects              # SPA routing fallback
 │   └── gallery/                # Real shop photos
 │       ├── shop-exterior.jpg
 │       ├── shop-interior.jpg
@@ -45,7 +69,7 @@ Kaja_Shop/
 │       └── overlock-machine.jpg
 └── src/
     ├── config/
-    │   └── business.ts         # ⭐ All business data (phone, prices, address, etc.)
+    │   └── business.ts         # ⭐ All business data — edit here
     ├── components/
     │   ├── Header.tsx
     │   ├── Hero.tsx
@@ -66,7 +90,7 @@ Kaja_Shop/
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ```bash
 # Install dependencies
@@ -85,26 +109,47 @@ npm run preview
 
 ---
 
-## Updating Business Content
+## ✏️ Updating Business Content
 
-All business information is centralised in one file:
+All business information is in **one single file**:
 
 📄 [`src/config/business.ts`](./src/config/business.ts)
 
-Update prices, phone number, address, WhatsApp message, or services — all in one place.
+```ts
+// Edit phone, address, prices, WhatsApp message — all here
+export const business = {
+  phone: "+918610045411",
+  phoneDisplay: "86100 45411",
+  address: "151, 2nd Main Rd, ...",
+  ...
+};
+
+export const prices = [
+  { service: "Off-Hand Overlock", price: 17 },
+  ...
+];
+```
 
 ---
 
-## Deployment
+## 📸 Adding Gallery Photos
 
-This site is deployed via **GitHub → Netlify**.
-
-- **Build command:** `npm run build`
-- **Publish directory:** `dist`
-- **Node version:** 20
+Drop new photos into `public/gallery/` and add them to [`src/components/Gallery.tsx`](./src/components/Gallery.tsx).
 
 ---
 
-## Developer
+## 🌐 Deployment
 
-Designed & developed by **Rakesh G**
+| Item | Value |
+|---|---|
+| **Platform** | Netlify |
+| **Build command** | `npm run build` |
+| **Publish directory** | `dist` |
+| **Node version** | 20 |
+| **Auto deploy** | ✅ On every `git push` to `main` |
+
+---
+
+## 👨‍💻 Developer
+
+Designed &amp; developed by **Rakesh G**
