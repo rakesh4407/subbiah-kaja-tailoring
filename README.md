@@ -2,7 +2,7 @@
 
 Official website for **SUBBIAH KAJA BUTTON & TAILORING**, a local tailoring and garment-finishing business in Virugambakkam, Chennai.
 
-🌐 **Live Website:** *(Not deployed yet — update this link after Netlify deployment)*
+🌐 **Live Website:** [https://subbiah-kaja-tailoring.netlify.app](https://subbiah-kaja-tailoring.netlify.app)
 
 ---
 
