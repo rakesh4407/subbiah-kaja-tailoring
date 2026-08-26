@@ -1,32 +1,110 @@
-# React + TypeScript + Vite
+# Subbiah Kaja Button & Tailoring — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Official website for **SUBBIAH KAJA BUTTON & TAILORING**, a local tailoring and garment-finishing business in Virugambakkam, Chennai.
 
-Currently, two official plugins are available:
+🌐 **Live Website:** *(Not deployed yet — update this link after Netlify deployment)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## About the Business
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**SUBBIAH KAJA BUTTON & TAILORING**
+📍 151, 2nd Main Rd, Sheik Abdullah Nagar, Virugambakkam, Chennai, Tamil Nadu 600092
+📞 86100 45411
 
-## Expanding the Oxlint configuration
+Services: Tailoring · Overlock · Button · Garment Finishing · Alterations
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+---
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Tech Stack
+
+| Tool | Version |
+|---|---|
+| React | 19 |
+| TypeScript | 6 |
+| Vite | 8 |
+| Tailwind CSS | v4 |
+| lucide-react | latest |
+
+---
+
+## Project Structure
+
+```
+Kaja_Shop/
+├── index.html                  # SEO metadata, JSON-LD schema, Google Fonts
+├── netlify.toml                # Netlify deployment config
+├── public/
+│   ├── favicon.svg
+│   ├── _redirects              # SPA routing for Netlify
+│   └── gallery/                # Real shop photos
+│       ├── shop-exterior.jpg
+│       ├── shop-interior.jpg
+│       ├── shop-signage.jpg
+│       ├── materials-buttons.jpg
+│       └── overlock-machine.jpg
+└── src/
+    ├── config/
+    │   └── business.ts         # ⭐ All business data (phone, prices, address, etc.)
+    ├── components/
+    │   ├── Header.tsx
+    │   ├── Hero.tsx
+    │   ├── Services.tsx
+    │   ├── PriceList.tsx
+    │   ├── Gallery.tsx
+    │   ├── About.tsx
+    │   ├── TrustSection.tsx
+    │   ├── Reviews.tsx
+    │   ├── Location.tsx
+    │   ├── Contact.tsx
+    │   ├── MobileBottomNav.tsx
+    │   └── Footer.tsx
+    ├── App.tsx
+    ├── main.tsx
+    └── index.css
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+# → http://localhost:5173
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## Updating Business Content
+
+All business information is centralised in one file:
+
+📄 [`src/config/business.ts`](./src/config/business.ts)
+
+Update prices, phone number, address, WhatsApp message, or services — all in one place.
+
+---
+
+## Deployment
+
+This site is deployed via **GitHub → Netlify**.
+
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+- **Node version:** 20
+
+---
+
+## Developer
+
+Designed & developed by **Rakesh G**

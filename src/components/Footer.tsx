@@ -96,7 +96,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-site py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-white/35 text-xs">
           <p>© {year} {business.name}. All rights reserved.</p>
-          <p>Virugambakkam, Chennai, Tamil Nadu 600092</p>
+          <p className="text-white/25">
+            Designed &amp; developed by{' '}
+            <span className="text-white/45 font-medium">Rakesh G</span>
+          </p>
         </div>
       </div>
     </footer>
