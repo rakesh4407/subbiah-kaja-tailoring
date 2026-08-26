@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-900: #0f2d1e;
+  --color-green-800: #1a4731;
+  --color-green-700: #1f5939;
+  --color-green-600: #2d6a4f;
+  --color-green-500: #3a8a64;
+  --color-green-400: #52a87e;
+  --color-green-100: #d4edda;
+  --color-green-50: #edf7f0;
+
+  --color-cream-100: #faf7f2;
+  --color-cream-200: #f5efe3;
+  --color-cream-300: #ede1cc;
+
+  --color-gold-500: #c9a227;
+  --color-gold-400: #d4af37;
+  --color-gold-300: #e0c45a;
+
+  --color-charcoal-900: #111111;
+  --color-charcoal-800: #1c1c1c;
+  --color-charcoal-700: #2e2e2e;
+  --color-charcoal-600: #444444;
+  --color-charcoal-400: #777777;
+  --color-charcoal-200: #c8c8c8;
+  --color-charcoal-100: #e8e8e8;
+
+  --font-family-sans: 'Inter', 'Noto Sans', system-ui, sans-serif;
+  --font-family-display: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    font-family: var(--font-family-sans);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 72px;
+  }
+
+  body {
+    background-color: #faf7f2;
+    color: #1c1c1c;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  :focus-visible {
+    outline: 2px solid #2d6a4f;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .container-site {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-site {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-site {
+      padding-inline: 2rem;
+    }
+  }
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+  animation: fadeIn 0.2s ease;
+}
+
+.lightbox-overlay img {
+  max-height: 90vh;
+  max-width: 90vw;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile bottom safe area */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
